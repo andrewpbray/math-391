@@ -4,10 +4,11 @@ title: Syllabus
 permalink: /syllabus/
 ---
 
-Probability
-
-> Probability is nothing but common sense reduced to calculation.
-> Laplace, 1819
+> The actual science of logic is conversant at present only with things either certain,
+impossible, or entirely doubtful, none of which (fortunately) we have to reason on.
+Therefore the true logic for this world is the calculus of Probabilities, which takes
+account of the magnitude of the probability which is, or ought to be, in a reasonable
+man's mind.  James Clerk Maxwell (1850).
 
 Probability is a field of mathematics that studies random events. It began ignominiously
 when mathematically minded people turned their attention to gambling ("games of chance").
@@ -35,11 +36,11 @@ theoretical results in limits then explore a series of special topics.
 
 ### Textbook
 
-[Probability with Applications and R](https://www.openintro.org/stat/textbook.php?stat_book=isrs) (2014),
+[Probability with Applications and R](https://www.amazon.com/Probability-Applications-Robert-P-Dobrow/dp/1118241258) (2014),
 by Robert P. Dobrow. The textbook is backordered from the publisher, but you can
 access it by:
 - Purchase one of the copies in the bookstore.
-- Find one online for purchase.
+- Find one online for purchase/rent.
 - Check out the copy on reserve at the library.
 - Refer to the digital copy via the library website.
 
@@ -52,13 +53,16 @@ on the problem sets, please see the tab at the top of the page.
 
 #### Exams
 
-We'll have several examinations and quizzes throughout the semester in order to challenge your understanding and provide us with a sense of where you're at. Some will be more traditional pen and paper and others are to be done with the computer using R.
+We'll have three examinations and quizzes throughout the semester in order to challenge your understanding and provide us with a sense of where you're at. Some will be more traditional pen and paper and others are to be done with the computer using R. These dates are **tentative** so stay tuned for updates.
 
-**Midterm I**  
-Friday, September 23, 2016
+**Exam I**  
+Wednesday, September 21, 2016
 
-**Midterm II**  
-Friday, due October 14th, 2016 (takehome)
+**Exam II**  
+Friday, October 14, 2016
+
+**Exam III**
+Wednesday, November 23, 2016
 
 **Final**  
 Finals Week
