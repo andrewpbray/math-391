@@ -25,24 +25,22 @@ of applications from the natural and social sciences will be used.
 - Office: Library 304
 - Office Hours:  Tu: 1:30 - 3 PM, Th: 3 - 4:30 PM, and by appointment
 
-**Evening Help Session**
-
-- Math Lounge (L318)
-    - Sunday - 7-9 PM
-    - Thursday - 7-10 PM
 
 ### Textbook
 
-[OpenIntro: Introductory Statistics with Randomization and Simulation](https://www.openintro.org/stat/textbook.php?stat_book=isrs) (2014),
-by Diez, Barr and Çetinkaya-Rundel, available in three formats: pdf, 
-tablet-friendly pdf, and paperback edition. The textbook is free and open-source,
-but you're encouraged to purchase the paperback edition through Amazon for < $10.
-The textbook is a key component of the course.
+[Probability with Applications and R](https://www.openintro.org/stat/textbook.php?stat_book=isrs) (2014),
+by Robert P. Dobrow. The textbook is backordered from the publisher, but you can
+access it by:
+- Purchase one of the copies in the bookstore.
+- Find one online for purchase.
+- Check out the copy on reserve at the library.
+- Refer to the digital copy via the library website.
+
 
 ### Class components
 
-This course has three components: Problem Sets, Labs, and Exams/Quizzes. For details
-on the first two, see the tabs at the top of the page.
+This course has three components: Problem Sets, Quizzes/Exams, and a Project. For details
+on the problem sets, please see the tab at the top of the page.
 
 
 #### Exams
