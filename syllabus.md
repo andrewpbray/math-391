@@ -4,7 +4,27 @@ title: Syllabus
 permalink: /syllabus/
 ---
 
-Here is the description
+Probability
+
+> Probability is nothing but common sense reduced to calculation.
+> Laplace, 1819
+
+Probability is a field of mathematics that studies random events. It began ignominiously
+when mathematically minded people turned their attention to gambling ("games of chance").
+It has developed into a deep body of mathematics that serves as the primary engine
+of statistical inference and much of modern science.
+
+This course serves well as an elective within the math major, particularly when 
+paired with Mathematical Statistics (MATH 392) in the spring. It will also be useful
+for majors in the sciences who utilize probability and statistical reasoning in 
+their work.
+
+The course begins with first principles, builds notions of independence, conditioning,
+random variables, and explores the properties of the fundamental discrete and 
+continuous distributions. There will be a strong problem-solving focus throughout,
+with intuition developed by composing analytical solutions alongside computational
+ones (in R). Towards the end of the course, we'll look at the major
+theoretical results in limits then explore a series of special topics.
 
 ### Contact
 [Andrew Bray](https://andrewpbray.github.io)
