@@ -39,6 +39,7 @@ theoretical results in limits then explore a series of special topics.
 [Probability with Applications and R](https://www.amazon.com/Probability-Applications-Robert-P-Dobrow/dp/1118241258) (2014),
 by Robert P. Dobrow. The textbook is backordered from the publisher, but you can
 access it by:
+
 - Purchase one of the copies in the bookstore.
 - Find one online for purchase/rent.
 - Check out the copy on reserve at the library.
