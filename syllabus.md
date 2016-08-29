@@ -61,7 +61,7 @@ Wednesday, September 21, 2016
 **Exam II**  
 Friday, October 14, 2016
 
-**Exam III**
+**Exam III**  
 Wednesday, November 23, 2016
 
 **Final**  
