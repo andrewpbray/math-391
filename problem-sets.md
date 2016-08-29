@@ -19,5 +19,5 @@ I advise you to start working on these early in the week. To aid you in that, th
 problems that roughly correspond to a lecture will be indicated on the weekly schedule.
 
 **PS1**: Chapter 1: 1, 8, 10, 11, 12, 18, 20, 28, 30, 31, 34, 38, 43, 33. Challenge problem:
-Solve the more general problem of Buffon's Needle where the wood strips are $s$ units
-in width and the needle is $l$ units in length.
+Solve the more general problem of Buffon's Needle where the wood strips are s units
+in width and the needle is l units in length.
