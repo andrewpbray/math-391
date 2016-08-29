@@ -14,8 +14,9 @@ opts_chunk$set(message = FALSE)
 ## Simulate Buffon's Needle
 
 ```{r}
-d     <- runif(n = 2000, min = 0, max = 1/2)
-theta <- runif(n = 2000, min = 0, max = pi)
+n <- 2000
+d     <- runif(n = n, min = 0, max = 1/2)
+theta <- runif(n = n, min = 0, max = pi)
 
 (df <- data_frame(d, theta))
 ```
