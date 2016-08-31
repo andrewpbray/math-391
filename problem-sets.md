@@ -20,4 +20,4 @@ problems that roughly correspond to a lecture will be indicated on the weekly sc
 
 **PS1**: Chapter 1: 1, 8, 10, 11, 12, 18, 20, 28, 30, 31, 34, 38, 43, 44. Challenge problem:
 Solve the more general problem of Buffon's Needle where the wood strips are s units
-in width and the needle is l units in length.
+in width and the needle is h units in length.
