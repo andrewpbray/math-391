@@ -170,8 +170,85 @@ $(document).ready(function () {
 
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmxpYnJhcnkoZ2dwbG90MilcbmxpYnJhcnkoa25pdHIpXG5vcHRzX2NodW5rJHNldChtZXNzYWdlID0gRkFMU0UsIGV2YWwgPSBUUlVFKVxuYGBgIn0= -->
+<pre class="r"><code>library(dplyr)
+library(ggplot2)
+library(knitr)
+opts_chunk$set(message = FALSE, eval = TRUE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<div id="simulate-buffons-needle" class="section level2">
+<h2>Simulate Buffon’s Needle</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubiA8LSAyMDAwXG5kICAgICA8LSBydW5pZihuID0gbiwgbWluID0gMCwgbWF4ID0gMS8yKVxudGhldGEgPC0gcnVuaWYobiA9IG4sIG1pbiA9IDAsIG1heCA9IHBpKVxuXG4oZGYgPC0gZGF0YV9mcmFtZShkLCB0aGV0YSkpXG5gYGAifQ== -->
+<pre class="r"><code>n &lt;- 2000
+d     &lt;- runif(n = n, min = 0, max = 1/2)
+theta &lt;- runif(n = n, min = 0, max = pi)
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoK</div>
+(df &lt;- data_frame(d, theta))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2luKHRoZXRhKS8yID4gZFxuYGBgIn0= -->
+<pre class="r"><code>sin(theta)/2 &gt; d</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVhbihzaW4odGhldGEpLzIgPiBkKVxuYGBgIn0= -->
+<pre class="r"><code>mean(sin(theta)/2 &gt; d)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMi9waVxuYGBgIn0= -->
+<pre class="r"><code>2/pi</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="visualize" class="section level1">
+<h1>Visualize</h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuKHAgPC0gZ2dwbG90KGRhdGEgPSBkZiwgYWVzKHggPSB0aGV0YSwgeSA9IGQpKSArXG4gIHNjYWxlX3hfY29udGludW91cyhleHBhbmQgPSBjKDAsIDApLCBsaW1pdHMgPSBjKDAsIHBpKSkgK1xuICBzY2FsZV95X2NvbnRpbnVvdXMoZXhwYW5kID0gYygwLCAwKSwgbGltaXRzID0gYygwLCAxLzIpKSArXG4gIHN0YXRfZnVuY3Rpb24oZnVuID0gZnVuY3Rpb24oeCkge3Npbih4KS8yfSkgK1xuICB0aGVtZV9idygpKVxuYGBgIn0= -->
+<pre class="r"><code>(p &lt;- ggplot(data = df, aes(x = theta, y = d)) +
+  scale_x_continuous(expand = c(0, 0), limits = c(0, pi)) +
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 1/2)) +
+  stat_function(fun = function(x) {sin(x)/2}) +
+  theme_bw())</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYgPC0gbXV0YXRlKGRmLCBjcm9zcyA9IHNpbih0aGV0YSkvMiA+IGQpXG5wICsgZ2VvbV9wb2ludChkYXRhID0gZGYsIGFlcyhjb2xvciA9IGNyb3NzKSlcbmBgYCJ9 -->
+<pre class="r"><code>df &lt;- mutate(df, cross = sin(theta)/2 &gt; d)
+p + geom_point(data = df, aes(color = cross))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<div id="estimating-pi" class="section level2">
+<h2>Estimating Pi</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMiAqIG4gLyBzdW0oZGYkY3Jvc3MpXG5gYGAifQ== -->
+<pre class="r"><code>2 * n / sum(df$cross)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+</div>
+</div>
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3IgbWVzc2FnZSA9IEZBTFNFfQpsaWJyYXJ5KGRwbHlyKQpsaWJyYXJ5KGdncGxvdDIpCmxpYnJhcnkoa25pdHIpCm9wdHNfY2h1bmskc2V0KG1lc3NhZ2UgPSBGQUxTRSwgZXZhbCA9IFRSVUUpCmBgYAoKCiMjIFNpbXVsYXRlIEJ1ZmZvbidzIE5lZWRsZQoKYGBge3J9Cm4gPC0gMjAwMApkICAgICA8LSBydW5pZihuID0gbiwgbWluID0gMCwgbWF4ID0gMS8yKQp0aGV0YSA8LSBydW5pZihuID0gbiwgbWluID0gMCwgbWF4ID0gcGkpCgooZGYgPC0gZGF0YV9mcmFtZShkLCB0aGV0YSkpCmBgYAoKYGBge3J9CnNpbih0aGV0YSkvMiA+IGQKYGBgCgpgYGB7cn0KbWVhbihzaW4odGhldGEpLzIgPiBkKQpgYGAKCmBgYHtyfQoyL3BpCmBgYAoKCiMgVmlzdWFsaXplCgpgYGB7cn0KKHAgPC0gZ2dwbG90KGRhdGEgPSBkZiwgYWVzKHggPSB0aGV0YSwgeSA9IGQpKSArCiAgc2NhbGVfeF9jb250aW51b3VzKGV4cGFuZCA9IGMoMCwgMCksIGxpbWl0cyA9IGMoMCwgcGkpKSArCiAgc2NhbGVfeV9jb250aW51b3VzKGV4cGFuZCA9IGMoMCwgMCksIGxpbWl0cyA9IGMoMCwgMS8yKSkgKwogIHN0YXRfZnVuY3Rpb24oZnVuID0gZnVuY3Rpb24oeCkge3Npbih4KS8yfSkgKwogIHRoZW1lX2J3KCkpCmBgYAoKYGBge3J9CmRmIDwtIG11dGF0ZShkZiwgY3Jvc3MgPSBzaW4odGhldGEpLzIgPiBkKQpwICsgZ2VvbV9wb2ludChkYXRhID0gZGYsIGFlcyhjb2xvciA9IGNyb3NzKSkKYGBgCgojIyBFc3RpbWF0aW5nIFBpCgpgYGB7cn0KMiAqIG4gLyBzdW0oZGYkY3Jvc3MpCmBgYAoK</div>
 
 
 

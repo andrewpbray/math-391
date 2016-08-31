@@ -7,7 +7,7 @@ output: html_notebook
 library(dplyr)
 library(ggplot2)
 library(knitr)
-opts_chunk$set(message = FALSE)
+opts_chunk$set(message = FALSE, eval = TRUE)
 ```
 
 
