@@ -1,0 +1,27 @@
+---
+title: "Practice"
+output: html_document
+---
+
+```{r message = FALSE, echo = FALSE}
+library(dplyr)
+library(ggplot2)
+library(knitr)
+opts_chunk$set(message = FALSE)
+```
+
+#### Question 1
+A strand of DNA are made up of a sequence of four nucleotides: As, Cs, Gs, and Ts.
+In the double-stranded helix, the A pairs with T, the C with the G. A *palindromic
+sequence* is equal to its reverse compliment, e.g. ACGT or GAATTC but not ACCA.
+
+Suppose that all possible strands of DNA of length 6 have equal probability. What
+is the probability that one of these strands is a palindomic sequence?
+
+#### Question 2
+A bag contains 6 Scrabble tiles: A, D, M, N, O, R. You reach into the bag and take
+out one tile at a time. What is the probability that you will spell the word RANDOM?
+
+#### Question 3
+Solve the previous problem, but this time, with each draw, you write the letter down
+then return it to the bag such that each draw has the full set of 6 letters.
