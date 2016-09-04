@@ -174,6 +174,9 @@ $(document).ready(function () {
 <p>What is P(6)?</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-output-begin eyJkYXRhIjoiVGhlIHdvcmtpbmcgZGlyZWN0b3J5IHdhcyBjaGFuZ2VkIHRvIC9Vc2Vycy9hYnJheS9Ecm9wYm94L3RlYWNoaW5nLzIwMTYtZmFsbC9tYXRoLTM5MS1mYWxsLTIwMTYvbWF0aC0zOTEgaW5zaWRlIGEgbm90ZWJvb2sgY2h1bmsuIFRoZSB3b3JraW5nIGRpcmVjdG9yeSB3aWxsIGJlIHJlc2V0IHdoZW4gdGhlIGNodW5rIGlzIGZpbmlzaGVkIHJ1bm5pbmcuIFVzZSB0aGUga25pdHIgcm9vdC5kaXIgb3B0aW9uIGluIHRoZSBzZXR1cCBjaHVuayB0byBjaGFuZ2UgdGhlIHRoZSB3b3JraW5nIGRpcmVjdG9yeSBmb3Igbm90ZWJvb2sgY2h1bmtzLlxuIn0= -->
+<pre><code>The working directory was changed to /Users/abray/Dropbox/teaching/2016-fall/math-391-fall-2016/math-391 inside a notebook chunk. The working directory will be reset when the chunk is finished running. Use the knitr root.dir option in the setup chunk to change the the working directory for notebook chunks.</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBTaW11bGF0ZVxudHJpYWwgPC0gc2FtcGxlKDE6Niwgc2l6ZSA9IDEpXG4jIFN1Y2Nlc3M/XG5zdWNjZXNzIDwtIGlmKHRyaWFsID09IDYpIDEgZWxzZSAwXG4jIEVzdGltYXRlXG5tZWFuKHN1Y2Nlc3MpXG5gYGAifQ== -->
 <pre class="r"><code># Simulate
 trial &lt;- sample(1:6, size = 1)
@@ -182,11 +185,17 @@ success &lt;- if(trial == 6) 1 else 0
 # Estimate
 mean(success)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDBcbiJ9 -->
+<pre><code>[1] 0</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Add the replication step:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-output-begin eyJkYXRhIjoiVGhlIHdvcmtpbmcgZGlyZWN0b3J5IHdhcyBjaGFuZ2VkIHRvIC9Vc2Vycy9hYnJheS9Ecm9wYm94L3RlYWNoaW5nLzIwMTYtZmFsbC9tYXRoLTM5MS1mYWxsLTIwMTYvbWF0aC0zOTEgaW5zaWRlIGEgbm90ZWJvb2sgY2h1bmsuIFRoZSB3b3JraW5nIGRpcmVjdG9yeSB3aWxsIGJlIHJlc2V0IHdoZW4gdGhlIGNodW5rIGlzIGZpbmlzaGVkIHJ1bm5pbmcuIFVzZSB0aGUga25pdHIgcm9vdC5kaXIgb3B0aW9uIGluIHRoZSBzZXR1cCBjaHVuayB0byBjaGFuZ2UgdGhlIHRoZSB3b3JraW5nIGRpcmVjdG9yeSBmb3Igbm90ZWJvb2sgY2h1bmtzLlxuIn0= -->
+<pre><code>The working directory was changed to /Users/abray/Dropbox/teaching/2016-fall/math-391-fall-2016/math-391 inside a notebook chunk. The working directory will be reset when the chunk is finished running. Use the knitr root.dir option in the setup chunk to change the the working directory for notebook chunks.</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubiA8LSAxZTZcbnNpbWxpc3QgPC0gbnVtZXJpYyhuKVxuIyBSZXBsaWNhdGVcbmZvcihpIGluIDE6bikge1xuICAjIFNpbXVsYXRlXG4gIHRyaWFsIDwtIHNhbXBsZSgxOjYsIHNpemUgPSAxKVxuICAjIFN1Y2Nlc3M/XG4gIHNpbWxpc3RbaV0gPC0gaWYodHJpYWwgPT0gNikgMSBlbHNlIDBcbn1cbiMgRXN0aW1hdGVcbm1lYW4oc2ltbGlzdClcbmBgYCJ9 -->
 <pre class="r"><code>n &lt;- 1e6
 simlist &lt;- numeric(n)
@@ -200,6 +209,9 @@ for(i in 1:n) {
 # Estimate
 mean(simlist)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDAuMTY2MzM0XG4ifQ== -->
+<pre><code>[1] 0.166334</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -211,7 +223,7 @@ mean(simlist)</code></pre>
 <!-- rnb-output-begin eyJkYXRhIjoiVGhlIHdvcmtpbmcgZGlyZWN0b3J5IHdhcyBjaGFuZ2VkIHRvIC9Vc2Vycy9hYnJheS9Ecm9wYm94L3RlYWNoaW5nLzIwMTYtZmFsbC9tYXRoLTM5MS1mYWxsLTIwMTYvbWF0aC0zOTEgaW5zaWRlIGEgbm90ZWJvb2sgY2h1bmsuIFRoZSB3b3JraW5nIGRpcmVjdG9yeSB3aWxsIGJlIHJlc2V0IHdoZW4gdGhlIGNodW5rIGlzIGZpbmlzaGVkIHJ1bm5pbmcuIFVzZSB0aGUga25pdHIgcm9vdC5kaXIgb3B0aW9uIGluIHRoZSBzZXR1cCBjaHVuayB0byBjaGFuZ2UgdGhlIHRoZSB3b3JraW5nIGRpcmVjdG9yeSBmb3Igbm90ZWJvb2sgY2h1bmtzLlxuIn0= -->
 <pre><code>The working directory was changed to /Users/abray/Dropbox/teaching/2016-fall/math-391-fall-2016/math-391 inside a notebook chunk. The working directory will be reset when the chunk is finished running. Use the knitr root.dir option in the setup chunk to change the the working directory for notebook chunks.</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubiA8LSAxZTZcbnNpbWxpc3QgPC0gbnVtZXJpYyhuKVxuIyBSZXBsaWNhdGVcbmZvcihpIGluIDE6bikge1xuICAjIFNpbXVsYXRlXG4gIHRyaWFsIDwtIHNhbXBsZSgxOjYsIHNpemUgPSAyLCByZXBsYWNlID0gRkFMU0UpXG4gICMgU3VjY2Vzcz9cbiAgc2ltbGlzdFtpXSA8LSBpZihzdW0odHJpYWwpID09IDQgfCBzdW0odHJpYWwpID09IDUpIDEgZWxzZSAwXG59XG4jIEVzdGltYXRlXG5tZWFuKHNpbWxpc3QpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubiA8LSAxZTZcbnNpbWxpc3QgPC0gbnVtZXJpYyhuKVxuIyBSZXBsaWNhdGVcbmZvcihpIGluIDE6bikge1xuICAjIFNpbXVsYXRlXG4gIHRyaWFsIDwtIHNhbXBsZSgxOjYsIHNpemUgPSAyLCByZXBsYWNlID0gRkFMU0UpXG4gICMgU3VjY2Vzcz9cbiAgc2ltbGlzdFtpXSA8LSBpZihzdW0odHJpYWwpID09IDQgfCBzdW0odHJpYWwpID09IDUpIDEgZWxzZSAwXG59XG4jIEVzdGltYXRlXG5lc3QgPC0gbWVhbihzaW1saXN0KVxuYGBgIn0= -->
 <pre class="r"><code>n &lt;- 1e6
 simlist &lt;- numeric(n)
 # Replicate
@@ -222,30 +234,34 @@ for(i in 1:n) {
   simlist[i] &lt;- if(sum(trial) == 4 | sum(trial) == 5) 1 else 0
 }
 # Estimate
-mean(simlist)</code></pre>
+est &lt;- mean(simlist)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDAuMjAwMThcbiJ9 -->
-<pre><code>[1] 0.20018</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>I estimate that the probability of two dice summing to either 4 or 5 is 0.2.</p>
 </div>
 <div id="buffons-needle" class="section level2">
 <h2>Buffon’s Needle</h2>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-output-begin eyJkYXRhIjoiVGhlIHdvcmtpbmcgZGlyZWN0b3J5IHdhcyBjaGFuZ2VkIHRvIC9Vc2Vycy9hYnJheS9Ecm9wYm94L3RlYWNoaW5nLzIwMTYtZmFsbC9tYXRoLTM5MS1mYWxsLTIwMTYvbWF0aC0zOTEgaW5zaWRlIGEgbm90ZWJvb2sgY2h1bmsuIFRoZSB3b3JraW5nIGRpcmVjdG9yeSB3aWxsIGJlIHJlc2V0IHdoZW4gdGhlIGNodW5rIGlzIGZpbmlzaGVkIHJ1bm5pbmcuIFVzZSB0aGUga25pdHIgcm9vdC5kaXIgb3B0aW9uIGluIHRoZSBzZXR1cCBjaHVuayB0byBjaGFuZ2UgdGhlIHRoZSB3b3JraW5nIGRpcmVjdG9yeSBmb3Igbm90ZWJvb2sgY2h1bmtzLlxuIn0= -->
+<pre><code>The working directory was changed to /Users/abray/Dropbox/teaching/2016-fall/math-391-fall-2016/math-391 inside a notebook chunk. The working directory will be reset when the chunk is finished running. Use the knitr root.dir option in the setup chunk to change the the working directory for notebook chunks.</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubiA8LSAyMDAwXG5kICAgICA8LSBydW5pZihuID0gbiwgbWluID0gMCwgbWF4ID0gMS8yKVxudGhldGEgPC0gcnVuaWYobiA9IG4sIG1pbiA9IDAsIG1heCA9IHBpKVxubWVhbihzaW4odGhldGEpLzIgPiBkKVxuYGBgIn0= -->
 <pre class="r"><code>n &lt;- 2000
 d     &lt;- runif(n = n, min = 0, max = 1/2)
 theta &lt;- runif(n = n, min = 0, max = pi)
 mean(sin(theta)/2 &gt; d)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDAuNjE4NVxuIn0= -->
+<pre><code>[1] 0.6185</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTW9udGUgQ2FybG8gU2ltdWxhdGlvbiIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyMgUm9sbGluZyBhIGRpZQoKV2hhdCBpcyBQKDYpPwoKYGBge3J9CiMgU2ltdWxhdGUKdHJpYWwgPC0gc2FtcGxlKDE6Niwgc2l6ZSA9IDEpCiMgU3VjY2Vzcz8Kc3VjY2VzcyA8LSBpZih0cmlhbCA9PSA2KSAxIGVsc2UgMAojIEVzdGltYXRlCm1lYW4oc3VjY2VzcykKYGBgCgoKQWRkIHRoZSByZXBsaWNhdGlvbiBzdGVwOgoKYGBge3J9Cm4gPC0gMWU2CnNpbWxpc3QgPC0gbnVtZXJpYyhuKQojIFJlcGxpY2F0ZQpmb3IoaSBpbiAxOm4pIHsKICAjIFNpbXVsYXRlCiAgdHJpYWwgPC0gc2FtcGxlKDE6Niwgc2l6ZSA9IDEpCiAgIyBTdWNjZXNzPwogIHNpbWxpc3RbaV0gPC0gaWYodHJpYWwgPT0gNikgMSBlbHNlIDAKfQojIEVzdGltYXRlCm1lYW4oc2ltbGlzdCkKYGBgCgoKIyMgU3VtbWluZyB0d28gZGljZQoKV2hhdCBpcyB0aGUgcHJvYmFibHkgdGhhdCB0aGUgc3VtIG9mIHR3byBkaWNlIGlzIDQgb3IgNT8KCmBgYHtyfQpuIDwtIDFlNgpzaW1saXN0IDwtIG51bWVyaWMobikKIyBSZXBsaWNhdGUKZm9yKGkgaW4gMTpuKSB7CiAgIyBTaW11bGF0ZQogIHRyaWFsIDwtIHNhbXBsZSgxOjYsIHNpemUgPSAyLCByZXBsYWNlID0gRkFMU0UpCiAgIyBTdWNjZXNzPwogIHNpbWxpc3RbaV0gPC0gaWYoc3VtKHRyaWFsKSA9PSA0IHwgc3VtKHRyaWFsKSA9PSA1KSAxIGVsc2UgMAp9CiMgRXN0aW1hdGUKbWVhbihzaW1saXN0KQpgYGAKCgojIyBCdWZmb24ncyBOZWVkbGUKCmBgYHtyfQpuIDwtIDIwMDAKZCAgICAgPC0gcnVuaWYobiA9IG4sIG1pbiA9IDAsIG1heCA9IDEvMikKdGhldGEgPC0gcnVuaWYobiA9IG4sIG1pbiA9IDAsIG1heCA9IHBpKQptZWFuKHNpbih0aGV0YSkvMiA+IGQpCmBgYAoKCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTW9udGUgQ2FybG8gU2ltdWxhdGlvbiIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyMgUm9sbGluZyBhIGRpZQoKV2hhdCBpcyBQKDYpPwoKYGBge3J9CiMgU2ltdWxhdGUKdHJpYWwgPC0gc2FtcGxlKDE6Niwgc2l6ZSA9IDEpCiMgU3VjY2Vzcz8Kc3VjY2VzcyA8LSBpZih0cmlhbCA9PSA2KSAxIGVsc2UgMAojIEVzdGltYXRlCm1lYW4oc3VjY2VzcykKYGBgCgoKQWRkIHRoZSByZXBsaWNhdGlvbiBzdGVwOgoKYGBge3J9Cm4gPC0gMWU2CnNpbWxpc3QgPC0gbnVtZXJpYyhuKQojIFJlcGxpY2F0ZQpmb3IoaSBpbiAxOm4pIHsKICAjIFNpbXVsYXRlCiAgdHJpYWwgPC0gc2FtcGxlKDE6Niwgc2l6ZSA9IDEpCiAgIyBTdWNjZXNzPwogIHNpbWxpc3RbaV0gPC0gaWYodHJpYWwgPT0gNikgMSBlbHNlIDAKfQojIEVzdGltYXRlCm1lYW4oc2ltbGlzdCkKYGBgCgoKIyMgU3VtbWluZyB0d28gZGljZQoKV2hhdCBpcyB0aGUgcHJvYmFibHkgdGhhdCB0aGUgc3VtIG9mIHR3byBkaWNlIGlzIDQgb3IgNT8KCmBgYHtyfQpuIDwtIDFlNgpzaW1saXN0IDwtIG51bWVyaWMobikKIyBSZXBsaWNhdGUKZm9yKGkgaW4gMTpuKSB7CiAgIyBTaW11bGF0ZQogIHRyaWFsIDwtIHNhbXBsZSgxOjYsIHNpemUgPSAyLCByZXBsYWNlID0gRkFMU0UpCiAgIyBTdWNjZXNzPwogIHNpbWxpc3RbaV0gPC0gaWYoc3VtKHRyaWFsKSA9PSA0IHwgc3VtKHRyaWFsKSA9PSA1KSAxIGVsc2UgMAp9CiMgRXN0aW1hdGUKZXN0IDwtIG1lYW4oc2ltbGlzdCkKYGBgCgpJIGVzdGltYXRlIHRoYXQgdGhlIHByb2JhYmlsaXR5IG9mIHR3byBkaWNlIHN1bW1pbmcgdG8gZWl0aGVyIDQgb3IgNSBpcyBgciByb3VuZChlc3QsIDMpYC4KCiMjIEJ1ZmZvbidzIE5lZWRsZQoKYGBge3J9Cm4gPC0gMjAwMApkICAgICA8LSBydW5pZihuID0gbiwgbWluID0gMCwgbWF4ID0gMS8yKQp0aGV0YSA8LSBydW5pZihuID0gbiwgbWluID0gMCwgbWF4ID0gcGkpCm1lYW4oc2luKHRoZXRhKS8yID4gZCkKYGBgCgoKCg==</div>
 
 
 

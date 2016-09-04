@@ -49,9 +49,10 @@ for(i in 1:n) {
   simlist[i] <- if(sum(trial) == 4 | sum(trial) == 5) 1 else 0
 }
 # Estimate
-mean(simlist)
+est <- mean(simlist)
 ```
 
+I estimate that the probability of two dice summing to either 4 or 5 is `r round(est, 3)`.
 
 ## Buffon's Needle
 
