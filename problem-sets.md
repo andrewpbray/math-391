@@ -22,4 +22,4 @@ problems that roughly correspond to a lecture will be indicated on the weekly sc
 Solve the more general problem of Buffon's Needle where the wood strips are s units
 in width and the needle is h units in length.
 
-**PS2**: Chapter 2: 4, 5, 11, 14, 16, 22, 24, 28 (a and b).
+**PS2**: Chapter 2: 4, 5, 11, 14, 16, 22, 24, 28 (a and b) (*correction: in problem 24, it should read that the .0238 refers to the women that actually have cancer*).
