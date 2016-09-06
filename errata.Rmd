@@ -1,0 +1,9 @@
+---
+title: "Errata to Dobrow Probability"
+output: html_document
+---
+
+
+### Chapter 1
+
+- p. 31: In exercise 1.31 b, are we looking for $P(X > 2)$ or $P(X \ge 2)$?
