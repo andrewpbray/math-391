@@ -1,0 +1,67 @@
+---
+title: "Monte Carlo Simulation"
+output: html_notebook
+---
+
+## Rolling a die
+
+What is P(6)?
+
+```{r}
+# Simulate
+trial <- sample(1:6, size = 1)
+# Success?
+success <- if(trial == 6) 1 else 0
+# Estimate
+mean(success)
+```
+
+
+Add the replication step:
+
+```{r}
+n <- 1e6
+simlist <- numeric(n)
+# Replicate
+for(i in 1:n) {
+  # Simulate
+  trial <- sample(1:6, size = 1)
+  # Success?
+  simlist[i] <- if(trial == 6) 1 else 0
+}
+# Estimate
+mean(simlist)
+```
+
+
+## Summing two dice
+
+What is the probably that the sum of two dice is 4 or 5?
+
+```{r}
+n <- 1e6
+simlist <- numeric(n)
+# Replicate
+for(i in 1:n) {
+  # Simulate
+  trial <- sample(1:6, size = 2, replace = FALSE)
+  # Success?
+  simlist[i] <- if(sum(trial) == 4 | sum(trial) == 5) 1 else 0
+}
+# Estimate
+est <- mean(simlist)
+```
+
+I estimate that the probability of two dice summing to either 4 or 5 is `r round(est, 3)`.
+
+## Buffon's Needle
+
+```{r}
+n <- 2000
+d     <- runif(n = n, min = 0, max = 1/2)
+theta <- runif(n = n, min = 0, max = pi)
+mean(sin(theta)/2 > d)
+```
+
+
+
