@@ -1,0 +1,41 @@
+---
+title: "The Monty Hall Problem"
+output: html_notebook
+---
+
+### Ask Marilyn
+
+This problem has an [interesting history](http://marilynvossavant.com/game-show-problem/) related to Marilyn vos Savant.
+
+### Simulating Monty Hall
+
+```{r}
+n <- 1e4
+simlist <- rep(NA, n)
+
+for(i in 1:n) {                                # Replicate
+  doors <- sample(c("goat", "goat", "car"), 3) # randomly distribute prizes
+  choice <- sample(1:3, 1)                     # randomly choose door number (Simulate)
+  if(doors[choice] == "car") {                 # if you chose the car
+    opens <- sample(c(1:3)[-choice], 1)        # host will open one of the two goats
+  } else {                                     # he will have to open the other goat
+    opens <- setdiff(which(doors == "goat"), choice)           
+  }
+  final <- setdiff(1:3, c(choice, opens))
+  simlist[i] <- doors[final]                   # Success?
+}
+
+sum(simlist == "car")/n                        # Estimate
+```
+
+
+### Simulating the die roll
+
+```{r}
+simlist <- sample(1:6, 1e5, replace = TRUE)
+mean(simlist == 3)
+oddsimlist <- simlist[simlist %in% c(1, 3, 5)]
+mean(oddsimlist == 3)
+```
+
+
