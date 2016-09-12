@@ -23,3 +23,5 @@ Solve the more general problem of Buffon's Needle where the wood strips are s un
 in width and the needle is h units in length.
 
 **PS2**: Chapter 2: 4, 5, 6, 11, 13, 14, 16, 22, 24, 28 (*correction: in problem 24, it should read that the .0238 refers to the women that actually have cancer*).
+
+**PS3**: Chapter 3: 4, 5, 6, 10ab, 12, 14, 16, 20, 22, 24, 25, 27, 28.
