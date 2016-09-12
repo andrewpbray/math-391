@@ -9,7 +9,8 @@ layout: default
   <h1 class="page-heading">Schedule</h1>
 
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% assign items = site.posts | sort: 'date' %}
+    {% for post in items %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
