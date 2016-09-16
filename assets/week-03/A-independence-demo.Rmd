@@ -1,0 +1,37 @@
+---
+output: html_notebook
+---
+
+### Practice Problem
+
+Three brands of IPA’s (X , Y , Z ) are to be ranked according to taste by a judge. Let
+
+1. Event A: Brand X is preferred over Y
+2. Event B: Brand X is ranked best
+3. Event C: Brand X is ranked second best.
+4. Event D: Brand X is ranked third best
+
+If the judge is actually a fraud and ranks the beers randomly, is event A independent of B,C, and D?
+
+
+### Conditional distributions
+
+```{r}
+library(mvtnorm)
+library(ggplot2)
+library(dplyr)
+
+n <- 10000
+X <- as.data.frame(rmvnorm(n = n, sigma = matrix(c(1, .5, .5, 1), ncol = 2)))
+ggplot(X, aes(x = V1, y = V2)) + geom_point()
+
+D <- X %>%
+  mutate(X = cut(V1, breaks = c(-5, -1, 0, 1, 5), labels = 1:4), Y = cut(V2, breaks = c(-5, -1, 0, 1, 5), labels = 1:4))
+
+ggplot(D, aes(x = X)) + geom_bar()
+
+D %>%
+  filter(Y == 1) %>%
+  ggplot(aes(x = X)) + geom_bar()
+```
+
