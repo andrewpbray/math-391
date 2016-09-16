@@ -1,0 +1,60 @@
+---
+output:
+  html_document: default
+---
+
+## The Binomial Distribution
+
+
+
+### Random Graphs
+
+Suppose we have a graph with $n$ nodes and non-directed edges that form with probability $p$.
+
+```{r}
+library(igraph)
+set.seed(404)
+n <- 45
+p <- .05
+m <- matrix(sample(c(0, 1), size = n^2, replace = TRUE, prob = c(1 - p, p)), ncol = n)
+g <- graph_from_adjacency_matrix(m)
+g <- simplify(g, remove.multiple = F, remove.loops = T) 
+plot(g, edge.arrow.size = .4, vertex.size = 9, vertex.label = NA)
+```
+
+### Graph Density
+
+Let $X$ be the number of edges in a random graph of $n$ vertices. There are ${n \choose 2}$ possible edges (trials), each forming independently with the same probability $p$. Thus,
+
+$$
+X \sim \textrm{Binom}(n = {n \choose 2}, p = p)
+$$
+
+Let's simulate many random graphs and note the number of edges of each.
+
+```{r}
+# replicate
+simlist <- rep(NA, 1e5)
+
+for(i in 1:1e5) {
+  # simulate
+  m <- matrix(sample(c(0, 1), size = n^2, replace = TRUE, prob = c(1 - p, p)), ncol = n)
+  m[lower.tri(m, diag = TRUE)] <- 0 # make undirected and remove loops
+  # store
+  simlist[i] <- sum(m)
+}
+
+hist(simlist, xlim = c(15, 75))
+barplot(dbinom(0:(choose(n, 2)), choose(n, 2), p), names.arg = 0:(choose(n, 2)), xlim = c(15, 75))
+
+df <- data.frame(x = simlist)
+library(ggplot2)
+ggplot(df, aes(x)) +
+  geom_histogram(aes(y = ..density..)) +
+  stat_function(fun = dbinom, 
+                args = list(size = choose(n, p), prob = p), 
+                lwd = 2, 
+                col = 'red')
+
+```
+

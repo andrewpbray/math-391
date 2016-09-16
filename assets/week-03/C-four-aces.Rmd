@@ -1,0 +1,62 @@
+---
+output: html_notebook
+---
+
+## Simulating the 4 Aces
+
+Deal a standard deck out into a sequence of all 52 cards. What is the probability that all 4 aces are adjacent to one another?
+
+We know the analytical approach give the answer:
+
+```{r}
+49/choose(52, 4)
+```
+
+
+
+#### Method 1
+
+Deal all cards out, then look at aces for adjacency.
+
+```{r}
+n <- 1e5
+simlist <- rep(NA, n)
+
+# replicate
+system.time(
+for(i in 1:n) {
+  # simulate
+  deal <- sample(1:52)
+  ace_indices <- which(deal %in% 1:4)
+  # success?
+  simlist[i] <- if(max(diff(ace_indices)) == 1) 1 else 0
+}
+)
+
+# estimate
+mean(simlist)
+```
+
+
+#### Method 2
+
+Select the indices of the aces directly, then check for adjacency.
+
+```{r}
+n <- 1e5
+simlist <- rep(NA, n)
+
+# replicate
+system.time(
+for(i in 1:n) {
+  # simulate
+  ace_indices <- sample(1:52, size = 4)
+  # success?
+  simlist[i] <- if(max(diff(sort(ace_indices))) == 1) 1 else 0
+}
+)
+
+# estimate
+mean(simlist)
+```
+
