@@ -6,7 +6,10 @@ output:
 ## The Binomial Distribution
 
 ```{r}
+x <- rbinom(1000, size = 30, prob = .8)
+hist(x)
 
+barplot(dbinom(0:30, 30, .8))
 ```
 
 
