@@ -1,17 +1,20 @@
 ---
 output:
-  html_document: default
+  html_notebook
 ---
 
 ## The Binomial Distribution
 
+```{r}
+
+```
 
 
 ### Random Graphs
 
 Suppose we have a graph with $n$ nodes and non-directed edges that form with probability $p$.
 
-```{r}
+```{r message = FALSE}
 library(igraph)
 set.seed(404)
 n <- 45
@@ -45,16 +48,27 @@ for(i in 1:1e5) {
 }
 
 hist(simlist, xlim = c(15, 75))
-barplot(dbinom(0:(choose(n, 2)), choose(n, 2), p), names.arg = 0:(choose(n, 2)), xlim = c(15, 75))
-
-df <- data.frame(x = simlist)
-library(ggplot2)
-ggplot(df, aes(x)) +
-  geom_histogram(aes(y = ..density..)) +
-  stat_function(fun = dbinom, 
-                args = list(size = choose(n, p), prob = p), 
-                lwd = 2, 
-                col = 'red')
-
 ```
+
+
+### Stirling's Approximation
+
+```{r}
+f1 <- function(n) {
+  factorial(n)
+}
+
+f2 <- function(n) {
+  n^n * exp(-n) * sqrt(2 * pi * n)
+}
+
+df <- data.frame(n = rep(1:30, 2),
+                 f = log(c(f1(1:30), f2(1:30))),
+                 func = as.factor(rep(c("factorial", "Stirlings"), each = 30))
+                 )
+library(ggplot2)
+ggplot(df, aes(x = n, y = f)) +
+  geom_line(aes(color = func))
+```
+
 
