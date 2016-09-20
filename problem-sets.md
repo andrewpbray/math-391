@@ -25,6 +25,6 @@ in width and the needle is h units in length.
 **PS2**: Chapter 2: 4, 5, 6, 11, 13, 14, 16, 22, 24, 28 (*correction: in problem 24, it should read that the .0238 refers to the women that actually have cancer*).
 
 **PS3**: Chapter 3: 4, 5, 6, 10ab, 12, 14, 16, 20, 22, 24, 25, 27, 28. (*correction: change exercise 12b to:  If 20 shoes are picked, what is the chance that at most one shoe from each of the 40 pairs will be picked?  (Remember, a left shoe is different than a right shoe.), in ex. 16, in the 2nd sentence of the prompt change "arranged in decreasing order"
-to "arranged in increasing order")
+to "arranged in increasing order"*)
 
-**PS4**: Chapter 3: 30, 34, 36, 40, 41. Chapter 4: 1, 2, 4, 5, 9, 11, 12, 16, 18, 20.
+**PS4**: Chapter 3: 30, 34, 36, 40, 41. Chapter 4: 1, 2, 4, 5, 9, 11, 12, 16, 18, 20. (*correction: 3.30c): the index for k should start at 1*)
