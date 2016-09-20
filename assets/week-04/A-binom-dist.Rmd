@@ -1,6 +1,6 @@
 ---
 output:
-  html_notebook
+  html_document
 ---
 
 ## The Binomial Distribution
@@ -51,6 +51,7 @@ for(i in 1:1e5) {
 }
 
 hist(simlist, xlim = c(15, 75))
+barplot(dbinom(1:choose(n, 2), choose(n, 2), prob = p))
 ```
 
 

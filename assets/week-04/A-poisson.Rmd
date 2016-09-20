@@ -1,5 +1,49 @@
 ---
-output: html_notebook
+output: html_document
 ---
 
 ## The Poisson Distribution
+
+```{r}
+x <- rpois(1000, 2)
+hist(x)
+```
+
+## Generating a Spatial Poisson Process
+
+```{r fig.height = 3, fig.width=3}
+library(ggplot2)
+library(dplyr)
+x <- runif(100)
+y <- runif(100)
+df <- data.frame(x, y)
+
+ggplot(df, aes(x = x, y = y)) + 
+  geom_point()
+
+df <- df %>%
+  mutate(inside = ifelse(x < .75 & x > .25 & y > .25 & y < .75, TRUE, FALSE))
+square <- data.frame(x = c(.25, .75, .75, .25), y = c(.25, .25, .75, .75))
+
+ggplot(df, aes(x = x, y = y)) +
+  geom_polygon(data = square, aes(x = x, y = y)) +
+  geom_point(data = df, aes(color = inside)) +
+  scale_colour_discrete(guide = FALSE)
+```
+
+
+```{r}
+simlist <- rep(NA, 1000)
+
+for(i in 1:1000) {
+  x <- runif(100)
+  y <- runif(100)
+  simlist[i] <- sum(x < .75 & x > .25 & y > .25 & y < .75)
+}
+
+hist(simlist)
+plot(dpois(1:40, lambda = 100*.25))
+```
+
+
+
