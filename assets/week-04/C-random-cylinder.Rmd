@@ -1,0 +1,29 @@
+---
+output: html_document
+---
+
+## Simulating Random Cylinders
+
+```{r}
+r <- sample(1:10, size = 50000, replace = T)
+h <- sample(1:10, size = 50000, replace = T)
+v <- pi * r^2 * h
+df <- data.frame(r, h, v)
+```
+
+```{r}
+library(ggplot2)
+library(dplyr)
+
+df2 <- count(df, r, h)
+ggplot(df2, aes(x=r, y=h, fill=n)) +
+  geom_tile()
+
+ggplot(df, aes(x = r)) + geom_bar()
+ggplot(df, aes(x = h)) + geom_bar()
+ggplot(df, aes(x = v)) + geom_histogram()
+
+mean(v)
+```
+
+
