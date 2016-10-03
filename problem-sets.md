@@ -28,3 +28,5 @@ in width and the needle is h units in length.
 to "arranged in increasing order"*)
 
 **PS4**: Chapter 3: 30, 34, 36, 40, 41. Chapter 4: 1, 2, 4, 5, 9, 11, 12, 16, 18, 20. (*correction: 3.30c): the index for k should start at 1*)
+
+**PS5**: Chapter 4: 24, 26, 30, 32, 35, 36, 38, 39, 46, 47, 49, 50
