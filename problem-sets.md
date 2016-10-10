@@ -30,3 +30,5 @@ to "arranged in increasing order"*)
 **PS4**: Chapter 3: 30, 34, 36, 40, 41. Chapter 4: 1, 2, 4, 5, 9, 11, 12, 16, 18, 20. (*correction: 3.30c): the index for k should start at 1*)
 
 **PS5**: Chapter 4: 24, 26, 30, 32, 35, 36, 38, 39, 46, 47, 49, 50
+
+**PS6**: Chapter 5: 1, 3, 13, 20, 21, 23, 27, 36, 37 
