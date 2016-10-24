@@ -1,0 +1,56 @@
+---
+output: html_document
+---
+
+# Simulation approach to the cubs and coins problem
+
+```{r}
+it <- 1000000
+p <- 1/7
+n <- rgeom(it, p) + 1
+y <- rbinom(it, size = n, p = 1/2)
+hist(y)
+mean(y)
+var(y)
+```
+
+We can then compare this to our analytical approach:
+
+```{r}
+k <- 1:20
+y <- (p/(1 - p)) * ((1 - p)/(1 + p))^k * (2/(1 + p))
+plot(y ~ k, type = "l")
+```
+
+
+# Coupon Collectors Simulation
+
+```{r}
+simcollect <- function(n) {
+coupons <- 1:n
+collection <- rep(0, n)
+counts <- 0
+while(sum(collection) < n) {
+ i <- sample(coupons, 1)
+ collection[i] <- 1
+ counts <- counts + 1
+}
+counts
+}
+
+simlist <- replicate(10000, simcollect(10))
+hist(simlist)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
