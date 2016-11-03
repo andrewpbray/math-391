@@ -1,0 +1,126 @@
+---
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Joint Density Functions
+
+We can visualize part of the following joint density function using as a 3D surface.
+
+$$
+f(x, y) = 6e^{-2x- 3y} \quad \quad (x, y > 0)
+$$
+
+```{r}
+f <- function(x, y) {
+  6 * exp(-2 * x - 3 * y)
+}
+
+dx <- .1
+dy <- .1
+x <- seq(0, 3, by = dx)
+y <- seq(0, 3, by = dy)
+z <- outer(x, y, f)
+persp(x, y, z, theta = 25, phi = 25)
+```
+
+Note that the function is defined or all $x, y > 0$, but most of the density is in this region around the origin.
+
+
+## Computing Joint Probabilities
+
+We represent the following probability graphically:
+
+$$
+P(X > 1, Y > .5) = \int_{y = .5}^{\infty} \int_{x = 1}^{\infty} f(x, y) dx, dy
+$$
+
+
+```{r}
+z2 <- z
+z2[1:10,] <- 0
+z2[, 1:5] <- 0
+
+persp(x, y, z2, theta = 25, phi = 25, zlim = c(0, max(z)))
+```
+
+### Computing the probability analytically
+
+On board.
+
+### Computing the probability computationally
+
+We approximate the integral by discretizing the continuous volume into a series
+of rectangles of height $f(x, y)$ and base area $dxdy$ and summing the probabilities.
+
+$$
+P(X > 1, Y > .5) \approx \sum_{x,y\textrm{ in grid}} f(x, y) dx, dy
+$$
+
+
+```{r}
+sum(z2 * dx * dy)
+```
+
+
+### Practice
+
+We can visualize $P(X > 1 \textrm{ or } Y > .5)$,
+
+```{r}
+z3 <- z
+z3[1:10, 1:5] <- 0
+persp(x, y, z3, theta = 25, phi = 25, zlim = c(0, max(z)))
+```
+
+then approximate it computationally.
+
+```{r}
+sum(z3 * dx * dy)
+```
+
+Or we can visualize the complement, $P(X < 1 \textrm{ or } Y < .5)$,
+
+```{r}
+z4 <- z
+z4[11:31, ] <- 0
+z4[, 6:31] <- 0
+persp(x, y, z4, theta = 25, phi = 25, zlim = c(0, max(z)))
+```
+
+and compute 1 minus its volume.
+
+```{r}
+1 - sum(z4 * dx * dy)
+```
+
+The fact that these methods aren't in close agreement is likely due to the disagreement
+between the discrete and continuous densities around the origin.
+
+## Marginal Probabilities
+
+We can visualize the process of integrating out $x$ to get $f_Y(y)$.
+
+```{r}
+fy <- colSums(z)
+plot(y, fy, pch = 16)
+lines(y, fy, col = "tomato", lwd = 2)
+```
+
+And equivalently for $f_X(x)$
+```{r}
+fx <- rowSums(z)
+plot(y, fy, pch = 16)
+lines(y, fy, col = "tomato", lwd = 2)
+points(x, fx, pch = 16)
+lines(x, fx, col = "steelblue", lwd = 2)
+```
+
+
