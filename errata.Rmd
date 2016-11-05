@@ -11,4 +11,4 @@ output: html_document
 - (in key) problem 1.38 a: the arithmetic doesn't add up.
 - p. 33: In exercise 1.43, why "at least one" 8? Should this be a "sum of 8" or a "sum greater than 8"?
 - (in key) problem 3.16 a: aren't there only 9 ways, not 10, to choose the position of the first card? If we allow A to be high or low, then it should be noted (as in part e)
-- 
+- p. 196: shouldn't the derivation of the multinomial coefficient use $x_r$, not $x_n$?
