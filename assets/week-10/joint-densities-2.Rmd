@@ -1,8 +1,8 @@
 ---
 output:
   html_document:
-    toc: false
-    toc_float: false
+    toc: true
+    toc_float: true
     code_folding: hide
 ---
 
@@ -91,7 +91,7 @@ persp(x, y, zconstrained, theta = 25, phi = 25)
 and we can approximate the volume using the discrete sum.
 
 ```{r}
-sum(zconstrained * dx * dx)
+sum(zconstrained * dx * dy)
 ```
 
 Or alternatively by taking the mean density of the points on the grid times the
