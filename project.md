@@ -30,7 +30,7 @@ Looking for ideas?  Check out some of the following topics or material in the fo
 - http://www.r-bloggers.com/probability-and-monte-carlo-methods
 
 ### Group Formation
-You will work in a group of three students. (I am willing to consider petitions for groups of two students: such proposals might include a justification and be received 24 hours before the regular project roster deadline.)
+You will work in a group of three students.
 
 ### Guidelines
 This project is deliberately open-ended: as stated before, 
