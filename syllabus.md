@@ -57,13 +57,10 @@ on the problem sets, please see the tab at the top of the page.
 We'll have three examinations and quizzes throughout the semester in order to challenge your understanding and provide us with a sense of where you're at. Some will be more traditional pen and paper and others are to be done with the computer using R. These dates are **tentative** so stay tuned for updates.
 
 **Exam I**  
-Wednesday, September 21, 2016
+Wednesday, September 28, 2016
 
 **Exam II**  
-Friday, October 14, 2016
-
-**Exam III**  
-Wednesday, November 23, 2016
+Take home, distributed Monday, November 7, 2016
 
 **Final**  
 Finals Week
