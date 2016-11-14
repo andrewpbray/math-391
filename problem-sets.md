@@ -36,3 +36,6 @@ to "arranged in increasing order"*)
 **PS7**: Chapter 6: 2, 4, 6, 11, 12, 14, 15, 18, 19
 
 **PS8**: Chapter 6: 23, 24, 27, 29, 30, 32, 33, 39, 44, 49, 58, 60
+
+**PS9**: Chapter 6: 37, 42, 51, 54; Ch. 7: 28; Ch. 9: 26
+
