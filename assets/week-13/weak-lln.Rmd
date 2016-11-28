@@ -1,0 +1,25 @@
+---
+title: "Weak Law of Large Numbers"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+wlln <- function(n, eps, p = .5) {
+  pbinom(n*p + n*eps, n, p) - pbinom(n*p - n*eps, n, p)
+}
+
+eps <- 0.01
+n <- seq(1, 20000, 1)
+y <- wlln(n, eps)
+df <- data.frame(n, y)
+
+library(ggplot2)
+ggplot(df, aes(x = n, y = y)) +
+  geom_line() +
+  scale_x_log10()
+```
+
